@@ -1,0 +1,398 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  background: #fff;
+  color: #333;
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
+}
+
+/* Contenedor general */
+.container {
+  margin: 0 ;
+  padding: 0;
+}
+
+/* Header */
+.header-section {
+  width: 100%;
+  background: #f4f4f4;
+  border-bottom: 2px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  padding: 0;
+}
+
+.header-container {
+  width: 100%;
+  max-width: 1200px; 
+}
+
+.header-iframe {
+  width: 100%;
+  height: 100px; 
+  border: none;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .header-iframe {
+    height: 80px; /* Un poco más compacto en móviles */
+  }
+}
+
+
+/* Barra de búsqueda */
+.search-area {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.search-input {
+  padding: 6px 10px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-btn {
+  padding: 6px 12px;
+  border: none;
+  background: #0073e6;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-btn:hover {
+  background: #005bb5;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+ font-size: 14px;
+  margin: 10px;
+  color: #333;
+  border-bottom: 2px solid #ccc;
+   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex !important;   /* Forzamos que siempre se muestre */
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+  z-index: 10; /* Lo sube por encima de otros elementos */
+}
+.breadcrumb a {
+  color: #0073e6;
+  text-decoration: none;
+  white-space: nowrap; /* Evita que se corte el texto a la mitad */
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb b {
+  color: #666;
+}
+
+/* Título del producto */
+.product-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Layout principal con sidebars pegados */
+.page-layout {
+   display: grid;
+  grid-template-columns: 300px minmax(0, 1fr) 300px;
+  gap: 40px;         
+  align-items: start;
+  width: 100%;  
+}
+
+/* Contenido central */
+.main-content {
+ flex: 1;
+  max-width: 1000px;
+  margin: 0 30px; /* añade más margen horizontal */
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+
+/* Descripción */
+.description-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.description-text {
+  margin-bottom: 10px;
+}
+
+/* Descarga */
+.download-section {
+  margin: 20px 0;
+}
+
+.download-link {
+  display: inline-block;
+  padding: 6px 12px;
+  background: #0073e6;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.download-link:hover {
+  background: #005bb5;
+}
+
+/* Especificaciones */
+.specs-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 20px 0 10px;
+}
+
+.specs-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.specs-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+/* Precio */
+.price-section {
+  margin: 20px 0;
+  padding: 10px;
+  background: #f4f4f4;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.price-text {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.price-amount {
+  font-weight: bold;
+  color: #e60000;
+}
+
+.buy-button img {
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* Imágenes producto */
+.product-images {
+  text-align: center;
+  margin: 15px 0 25px;
+}
+
+.product-image {
+  max-width: 200px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.image-caption {
+  font-size: 12px;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* Sidebars */
+.sidebar-left,
+.sidebar-right {
+  width: 300px;        /* igual al grid */
+  flex-shrink: 100;  /* no se encoge */
+  background: #f0d1d1;
+    border: 1px solid #ddd;
+}
+
+.sidebar-iframe {
+ width: 100%;
+ height: 970px;
+ display: block;
+ border: none;
+    box-shadow: 0 10px 8px rgba(0,0,0,0.1);
+}
+
+/* Cuadro que encierra todo el layout */
+.page-wrapper {
+ width: 100%;          
+  max-width: none;     
+  margin: 0;   
+  padding: 20px 0;
+  border: none;
+  border-radius: 8px;
+  background: #f9f9f9;
+  box-shadow:none;
+  border-bottom: 10px solid #ccc;
+   box-shadow: 0 10px 4px rgba(0,0,0,0.1);
+   flex: 1; 
+}
+
+/* Opcional: bordes internos para separar áreas */
+.sidebar-left,
+.sidebar-right,
+.main-content {
+  background: #fff;         
+  border: 1px solid #ddd;   
+  border-radius: 6px;       
+  padding: 10px;
+  box-shadow: 0 15px 8px rgba(0,0,0,0.1);  
+  
+}
+
+
+/* Sección extra de iframes (debajo del contenido principal) */
+/* Contenedor de iframes */
+.extra-iframes {
+ width: 100%;
+  max-width: 1200px;       /* límite de ancho en pantallas grandes */
+  margin: 50px auto;      
+  display: flex;
+  flex-direction: column;  /* apilar iframes */
+  align-items: center;     /* centrar horizontalmente */
+  gap: 30px;
+
+}
+.extra-iframes iframe {
+  width: 90%;              /* ocupa el 90% del contenedor */
+  max-width: 55%;       /* ancho máximo */
+  height: 668px;
+  border: 13px solid #181616;
+  border-radius: 8px;
+  box-shadow: 0 10px 8px rgba(0,0,0,0.1);  
+}
+
+/* Efecto hover */
+.extra-iframes iframe:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25); /* sombra más intensa */
+  border: 2px solid #0073e6;               /* borde azul */
+  transform: scale(1.02);                  /* efecto "zoom" suave */
+}
+
+
+/* Bloque de contacto */
+.contact-info {
+width: 100%;          /* ancho completo */
+  max-width: none;      /* elimina cualquier límite de ancho */
+  background-color: #8f8c8c;
+  color: #020101;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-top: 50px;     /* separa del contenido anterior */
+}
+/* Responsive: ocultar iframes extra en móviles */
+@media screen and (max-width: 768px) {
+  .extra-iframes iframe {
+    display: block !important;  /* fuerza que se muestren */
+    width: 100%;
+    max-width: 100%;
+    height: 400px;               /* ajusta altura para móviles */
+  }
+}
+/* Galería */
+.product-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Imagen principal */
+.main-image img {
+  width: 350px;        /* ancho fijo (ajusta según tu diseño) */
+  height: 350px;       /* alto fijo */
+  object-fit: contain; /* mantiene proporciones sin recortar */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+}
+
+/* Miniaturas */
+.thumbnails {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.thumbnails img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain; /* las miniaturas también se ajustan */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.thumbnails img:hover {
+  transform: scale(1.1);
+  border-color: #0073e6;
+}
+
+/* Texto debajo */
+.image-caption {
+  font-size: 12px;
+  color: #666;
+  margin-top: 5px;
+}
+
+
+/* Responsive */
+@media screen and (max-width: 1032px) {
+  .sidebar-left,
+  .sidebar-right,
+  .breadcrumb {
+    display: none;
+  }
+
+  .page-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;   /* centra el main en medio */
+    align-items: flex-start;   /* alinea arriba */
+    width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .breadcrumb {
+    font-size: 12px; 
+    margin: 5px;     
+    justify-content: center; /* Centrar breadcrumb */
+    text-align: center;
+  }
+    .search-input {
+        width: 70%;  /* ocupa más espacio en móviles */
+    }search-btn {
+        width: auto;
+    }
+}
