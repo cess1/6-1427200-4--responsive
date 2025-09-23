@@ -227,18 +227,20 @@ body {
 /* Sidebars */
 .sidebar-left,
 .sidebar-right {
-  width: 300px;        /* igual al grid */
-  flex-shrink: 100;  /* no se encoge */
+  width: 100%;        /* igual al grid */
+  flex-shrink: 0;  /* no se encoge */
   background: #f0d1d1;
     border: 1px solid #ddd;
+    padding: 20px;
 }
 
 .sidebar-iframe {
  width: 100%;
  height: 970px;
- display: block;
+ padding: 10px;
+ border-radius: 8px;
  border: none;
-    box-shadow: 0 10px 8px rgba(0,0,0,0.1);
+ box-shadow: 0 10px 8px rgba(0,0,0,0.1);
 }
 
 /* Cuadro que encierra todo el layout */
@@ -246,7 +248,7 @@ body {
  width: 100%;          
   max-width: none;     
   margin: 0;   
-  padding: 20px 0;
+  padding: 20px ;
   border: none;
   border-radius: 8px;
   background: #f9f9f9;
@@ -254,6 +256,7 @@ body {
   border-bottom: 10px solid #ccc;
    box-shadow: 0 10px 4px rgba(0,0,0,0.1);
    flex: 1; 
+   display: flex;
 }
 
 /* Opcional: bordes internos para separar áreas */
@@ -263,7 +266,7 @@ body {
   background: #fff;         
   border: 1px solid #ddd;   
   border-radius: 6px;       
-  padding: 10px;
+  padding: 20px;
   box-shadow: 0 15px 8px rgba(0,0,0,0.1);  
   
 }
